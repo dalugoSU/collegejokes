@@ -9,11 +9,11 @@ class Joke(Resource):
     
     def get(self, id_=0):
         if id_==0:
-            return random.choice(jokes), 200
+            return {"joke": random.choice(jokes)}, 200
         
         for joke in jokes:
             if joke["id"] == id_:
-                return joke, 200
+                return {"joke": joke}, 200
         
         return "ID out of bounds...", 404
     
