@@ -8,7 +8,7 @@ import random
 class Joke(Resource):
     
     def get(self, id_=0):
-        if id==0:
+        if id_==0:
             return random.choice(jokes), 200
         
         for joke in jokes:
