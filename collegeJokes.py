@@ -69,4 +69,4 @@ api = Api(app)
 api.add_resource(Joke, "/jokes", "/jokes", "/jokes/<int:id>")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
